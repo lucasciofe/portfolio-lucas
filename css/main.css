@@ -1,0 +1,124 @@
+.about, .projects {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  /* grid-template-rows: 1fr 3fr; */
+  gap: 50px;
+  margin-bottom: 80px;
+   
+}
+
+.about h2 , .projects h2 {
+  text-align: right;
+  /* align-self: center; */
+  padding-right: 30px;
+  border-right: 5px solid grey;
+  font-size: 3rem;
+  
+}
+
+
+.about p {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.gridContainer {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr;
+ grid-template-areas:
+ "html html html html"
+ "iot iot mern mern"
+ "javascript javascript data data";
+ gap: 20px;
+ height: 800px;
+ 
+}
+
+
+/* setting image properties  */
+.iot, .javascript, .html, .data, .mern {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* setting the text of each image */
+.text {
+  background: rgb(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.text a {
+  color: #fff;
+}
+
+
+/* set up the images of projects in background */
+
+.mern {
+  grid-area: mern;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+.iot {
+  grid-area: iot;
+  background-image: url("../images/02-portfolio-1.jpg"); 
+}
+
+.javascript {
+  grid-area: javascript;
+  background-image: url("../images/02-portfolio-2.jpg");
+  
+}
+
+.html {
+  grid-area: html;
+  background-image: url("../images/horiseon-agency.jpg");
+}
+
+.data {
+  grid-area: data;
+  background-image: url("../images/02-run-buddy.jpg");
+}
+
+.javascript:hover, .mern:hover, .html:hover, .data:hover, .iot:hover{
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+
+@media screen and (max-width:600px){
+  .about, .projects{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gridContainer{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "html"
+    "iot"
+    "mern"
+    "javascript"
+    "data";
+    height: 1000px;
+  }
+
+  .about h2, .projects h2 {
+    border: none;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .about p {
+    font-size: 1.125rem;
+    padding: 10px;
+  }
+}

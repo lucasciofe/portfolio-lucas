@@ -1,0 +1,47 @@
+@import "/css/header.css";
+@import "./main.css";
+@import "./contact.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(192, 185, 185);
+}
+
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+.background {
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: flex-end;
+}
+.background-image {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url(../images/02-hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.background h2{
+  position: absolute;
+  margin-right: 50px;
+  padding: 15px 30px;
+  background-color: rgb(0, 0, 0, 0.7);
+  font-size: 2rem;
+  color: #f5f5f5;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  bottom: 20px;
+  
+}
